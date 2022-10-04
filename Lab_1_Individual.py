@@ -17,7 +17,7 @@ if __name__ == '__main__':
         is_find = False
 
         for item in list_of_dicts:
-            if item['Успеваемость'].__contains__(2):
+            if 2 in item['Успеваемость']:
                 print(f'Двоишники:\n {item["Фамилия и инициалы"]}\nГруппа: {item["Номер группы"]}\n\n')
                 is_find = True
 
