@@ -2,7 +2,8 @@ if __name__ == '__main__':
     if __name__ == '__main__':
         list_of_dicts = list()
 
-        for i in range(2):
+        n = int(input("Введите количество студентов: "))
+        for i in range(n):
             d = dict()
 
             d['Фамилия и инициалы'] = input("Введите ФИО: ")
