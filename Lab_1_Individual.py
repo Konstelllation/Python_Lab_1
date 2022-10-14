@@ -46,10 +46,32 @@ if __name__ == '__main__':
     is_find = False
 
     print("\nДвоишники:\n")
+    print(line)
+    print(
+        '| {:^4} | {:^30} | {:^20} | {:^20} |'.format(
+            "No",
+            "Фамилия и инициалы",
+            "Номер группы",
+            "Успеваемость"
+        )
+    )
+    print(line)
+
+    idx =1
     for item in list_of_dicts:
         if 2 in list(map(int, item['Успеваемость'].split())):
-            print(f'{item["Фамилия и инициалы"]}\nГруппа: {item["Номер группы"]}\n\n')
             is_find = True
+            print(
+                '| {:>4} | {:<30} | {:<20} | {:>20} |'.format(
+                    idx,
+                    d.get('Фамилия и инициалы', ''),
+                    d.get('Номер группы', ''),
+                    d.get('Успеваемость', '')
+                )
+            )
+
+            print(line)
+            idx += 1
 
     if not is_find:
         print("Нет двоишников!")
